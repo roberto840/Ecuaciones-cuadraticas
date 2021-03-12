@@ -67,15 +67,15 @@ public class EcuacionesCuadraticas {
                 System.out.println("la varianza es: "+varianza); 
             break;
             case 4:
-                int a,b,c,igual;
+                double a,b,c,igual;
                 System.out.println("Ingresa el valor de a(x^2)");
-                a=teclado.nextInt();
+                a=teclado.nextDouble();
                 System.out.println("Ingresa el valor de b(x)");
-                b=teclado.nextInt();
+                b=teclado.nextDouble();
                 System.out.println("Ingresa el valor de c(termino independiente)");
-                c=teclado.nextInt();
+                c=teclado.nextDouble();
                 System.out.println("Todo esto es igual a:");
-                igual=teclado.nextInt();
+                igual=teclado.nextDouble();
                 c=c-igual;
                 System.out.println("Resolucion por formula general:");
                 FormulaGeneral(a,b,c);
@@ -98,7 +98,7 @@ public class EcuacionesCuadraticas {
      
     }
     
-    public static boolean discriminante(int a,int b,int c){
+    public static boolean discriminante(double a,double b,double c){
         double discriminante;
         discriminante=(Math.pow(b,2))-(4*(a)*(c));
         if(discriminante<0){
@@ -109,7 +109,7 @@ public class EcuacionesCuadraticas {
         }
     }
     
-    public static void FormulaGeneral(int a,int b,int c){
+    public static void FormulaGeneral(double a,double b,double c){
         double ac,x1,x2;
         ac=(Math.pow(b,2))-(4*(a)*(c));
         if(discriminante(a,b,c)==true){
@@ -122,7 +122,7 @@ public class EcuacionesCuadraticas {
             System.out.println("x2="+x2);
         }
     }
-    public static void PoShenLoh(int a,int b,int c){
+    public static void PoShenLoh(double a,double b,double c){
         if(discriminante(a,b,c)==true){
             System.out.println("El problema no tiene solucion");
         }
@@ -146,7 +146,7 @@ public class EcuacionesCuadraticas {
         return numero * factorial(numero-1);
     }
     
-    public static void FormulaGeneralInversa(int a,int b,int c){
+    public static void FormulaGeneralInversa(double a,double b,double c){
         if(discriminante(a,b,c)==true){
             System.out.println("El problema no tiene solucion");
         }
